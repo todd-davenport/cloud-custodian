@@ -168,6 +168,10 @@ border for the slack message. This accepts the Slack presets of `danger` (red),
 the [Slack documentation](https://api.slack.com/reference/messaging/attachments#fields)
 for details.
 
+Note: if you are using a hex color code it will need to be wrapped in quotes
+like so: `slack_msg_color: '#4287f51'`. Otherwise the YAML interpreter will consider it a
+[comment](https://yaml.org/spec/1.2/spec.html#id2780069).
+
 Slack integration for the mailer supports several flavors of messaging, listed below. These are not mutually exclusive and any combination of the types can be used, but the preferred method is [incoming webhooks](https://api.slack.com/incoming-webhooks).
 
 | Requires&nbsp;`slack_token` | Key                                                                             | Type   | Notes                                                                                                                                                           |
